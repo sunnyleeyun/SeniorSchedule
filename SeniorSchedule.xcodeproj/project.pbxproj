@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		9BB181A41D68B65800CF3B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB181A31D68B65800CF3B8D /* AppDelegate.swift */; };
-		9BB181A61D68B65800CF3B8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB181A51D68B65800CF3B8D /* ViewController.swift */; };
+		9BB181A61D68B65800CF3B8D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB181A51D68B65800CF3B8D /* FirstViewController.swift */; };
 		9BB181A91D68B65800CF3B8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB181A71D68B65800CF3B8D /* Main.storyboard */; };
 		9BB181AB1D68B65800CF3B8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB181AA1D68B65800CF3B8D /* Assets.xcassets */; };
 		9BB181AE1D68B65800CF3B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB181AC1D68B65800CF3B8D /* LaunchScreen.storyboard */; };
+		9BFA104E1D72FF5D005F1DFC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA104D1D72FF5D005F1DFC /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9BB181A01D68B65800CF3B8D /* SeniorSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeniorSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB181A31D68B65800CF3B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9BB181A51D68B65800CF3B8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BB181A51D68B65800CF3B8D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		9BB181A81D68B65800CF3B8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BB181AA1D68B65800CF3B8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BB181AD1D68B65800CF3B8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BB181AF1D68B65800CF3B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BFA104D1D72FF5D005F1DFC /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				9BB181A31D68B65800CF3B8D /* AppDelegate.swift */,
-				9BB181A51D68B65800CF3B8D /* ViewController.swift */,
+				9BB181A51D68B65800CF3B8D /* FirstViewController.swift */,
 				9BB181A71D68B65800CF3B8D /* Main.storyboard */,
+				9BFA104D1D72FF5D005F1DFC /* SecondViewController.swift */,
 				9BB181AA1D68B65800CF3B8D /* Assets.xcassets */,
 				9BB181AC1D68B65800CF3B8D /* LaunchScreen.storyboard */,
 				9BB181AF1D68B65800CF3B8D /* Info.plist */,
@@ -136,7 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BB181A61D68B65800CF3B8D /* ViewController.swift in Sources */,
+				9BFA104E1D72FF5D005F1DFC /* SecondViewController.swift in Sources */,
+				9BB181A61D68B65800CF3B8D /* FirstViewController.swift in Sources */,
 				9BB181A41D68B65800CF3B8D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +260,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunnyleeyun.SeniorSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -267,6 +272,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunnyleeyun.SeniorSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -289,6 +295,7 @@
 				9BB181B41D68B65800CF3B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

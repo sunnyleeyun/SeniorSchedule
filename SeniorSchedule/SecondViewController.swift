@@ -1,25 +1,24 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  SeniorSchedule
 //
-//  Created by Sunny on 2016/8/21.
+//  Created by Sunny on 2016/8/28.
 //  Copyright © 2016年 Sunny. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SecondViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
-
