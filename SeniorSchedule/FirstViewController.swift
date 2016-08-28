@@ -10,9 +10,17 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var fingerImage: UIImageView!
+    @IBOutlet weak var calenderImage: UIImageView!
+    @IBOutlet weak var moodImage: UIImageView!
+    @IBOutlet weak var dogpawImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.fingerImage.image = UIImage(named: "finger")
+        self.calenderImage.image = UIImage(named: "calender")
+        self.moodImage.image = UIImage(named: "mood")
+        self.dogpawImage.image = UIImage(named: "dogpaw")
     }
 
     override func didReceiveMemoryWarning() {
