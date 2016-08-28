@@ -12,6 +12,16 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     
     var subjects = ["國文","英文","數學","地理","歷史","公民","物理","化學","地科","生物","術科","其他"]
     @IBOutlet weak var subjectText: UITextField!
+    
+    @IBOutlet weak var typeClass: UISegmentedControl!
+    @IBOutlet weak var typePractice: UISegmentedControl!
+    @IBOutlet weak var typeRange: UISegmentedControl!
+    
+    
+    @IBOutlet weak var labelType: UILabel!
+    @IBOutlet weak var labelPractice: UILabel!
+    @IBOutlet weak var labelRange: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,7 +33,6 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     }
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
-        
     {
         let pickerLabel = UILabel()
         pickerLabel.textColor = UIColor.blackColor()
@@ -44,5 +53,53 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         subjectText.text = subjects[row]
     }
+    
+    @IBAction func typeClass(sender: AnyObject) {
+        if typeClass.selectedSegmentIndex == 0 {
+            labelType.text = "補習"
+        }else if typeClass.selectedSegmentIndex == 1 {
+            labelType.text = "進度"
+        }else if typeClass.selectedSegmentIndex == 2 {
+            labelType.text = "複習"
+        }
+    }
+    
+    @IBAction func typePractice(sender: AnyObject) {
+        if typePractice.selectedSegmentIndex == 0{
+            labelPractice.text = "考卷"
+        }else if typePractice.selectedSegmentIndex == 1{
+            labelPractice.text = "習作"
+        }else if typePractice.selectedSegmentIndex == 2{
+            labelPractice.text = "課本"
+        }else if typePractice.selectedSegmentIndex == 3{
+            labelPractice.text = "參考書"
+        }else if typePractice.selectedSegmentIndex == 4{
+            labelPractice.text = "歷屆"
+        }else{
+            labelPractice.hidden = true
+        }
+    }
+   
+    @IBAction func typeRange(sender: AnyObject) {
+        if typeRange.selectedSegmentIndex == 0{
+            labelRange.text = "頁"
+        }else if typeRange.selectedSegmentIndex == 1{
+            labelRange.text = "課"
+        }else if typeRange.selectedSegmentIndex == 2{
+            labelRange.text = "章"
+        }else if typeRange.selectedSegmentIndex == 3{
+            labelRange.text = "冊"
+        }else{
+            labelRange.hidden = true
+        }
+    }
+    
+    
+    
+    @IBAction func confirm(sender: AnyObject) {
+        
+    }
+    
+    
 
 }

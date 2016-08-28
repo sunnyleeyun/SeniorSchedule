@@ -161,8 +161,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSH-sC-uo2">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="Fe1-Vg-zqt" userLabel="全部Stack View">
-                                                <rect key="frame" x="50" y="60" width="500" height="894"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Fe1-Vg-zqt" userLabel="全部Stack View">
+                                                <rect key="frame" x="50" y="60" width="500" height="794"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-To-PUU" userLabel="時間Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="500" height="30"/>
@@ -176,7 +176,7 @@
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fmr-05-5BJ">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fmr-05-5BJ">
                                                                 <rect key="frame" x="100" y="0.0" width="160" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="160" id="Xtu-md-hob"/>
@@ -193,7 +193,7 @@
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-n8-85d">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-n8-85d">
                                                                 <rect key="frame" x="340" y="0.0" width="160" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="160" id="h43-tA-b54"/>
@@ -206,8 +206,8 @@
                                                             <constraint firstAttribute="width" constant="500" id="sX7-fw-WJu"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ueF-rD-jxk">
-                                                        <rect key="frame" x="0.0" y="150" width="500" height="29"/>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ueF-rD-jxk" userLabel="課程種類">
+                                                        <rect key="frame" x="0.0" y="130" width="500" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="500" id="waW-E5-qno"/>
                                                         </constraints>
@@ -216,11 +216,14 @@
                                                             <segment title="進度"/>
                                                             <segment title="複習"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="typeClass:" destination="b80-UB-e2H" eventType="valueChanged" id="HL5-Op-0RI"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kwB-uZ-qse" userLabel="科目Stack View">
-                                                        <rect key="frame" x="0.0" y="298" width="500" height="150"/>
+                                                        <rect key="frame" x="0.0" y="258" width="500" height="150"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="科目：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-zI-1sX">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="科目：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-zI-1sX">
                                                                 <rect key="frame" x="0.0" y="65" width="100" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="yMw-8r-Osf"/>
@@ -252,8 +255,8 @@
                                                             <constraint firstAttribute="width" constant="500" id="rIF-m0-qe7"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-iT-zK7">
-                                                        <rect key="frame" x="0.0" y="568" width="500" height="29"/>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-iT-zK7" userLabel="練習種類">
+                                                        <rect key="frame" x="0.0" y="508" width="500" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="500" id="k8d-Yf-jWp"/>
                                                         </constraints>
@@ -264,9 +267,12 @@
                                                             <segment title="參考書"/>
                                                             <segment title="歷屆"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="typePractice:" destination="b80-UB-e2H" eventType="valueChanged" id="Our-Tc-TtB"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5GJ-ud-v1R" userLabel="範圍Stack View">
-                                                        <rect key="frame" x="0.0" y="716" width="500" height="30"/>
+                                                        <rect key="frame" x="0.0" y="636" width="500" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="範圍：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OY-Lv-9AY">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
@@ -307,8 +313,8 @@
                                                             <constraint firstAttribute="width" constant="500" id="5OO-wd-gcS"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TGE-WP-CZC">
-                                                        <rect key="frame" x="0.0" y="866" width="500" height="29"/>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="TGE-WP-CZC" userLabel="範圍種類">
+                                                        <rect key="frame" x="0.0" y="766" width="500" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="500" id="tIj-8L-Vi9"/>
                                                         </constraints>
@@ -318,13 +324,37 @@
                                                             <segment title="章"/>
                                                             <segment title="冊"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="typeRange:" destination="b80-UB-e2H" eventType="valueChanged" id="4Vb-U8-pOe"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTp-eb-Qy5">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTp-eb-Qy5">
                                                 <rect key="frame" x="285" y="1029" width="30" height="30"/>
                                                 <state key="normal" title="確認"/>
+                                                <connections>
+                                                    <action selector="confirm:" destination="b80-UB-e2H" eventType="touchUpInside" id="bN5-sX-Fnb"/>
+                                                </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRq-rB-iH3">
+                                                <rect key="frame" x="40" y="960" width="52" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djR-O9-TOe">
+                                                <rect key="frame" x="40" y="998" width="52" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-Zi-k5W">
+                                                <rect key="frame" x="42" y="924" width="50" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -359,7 +389,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1200"/>
                     <connections>
+                        <outlet property="labelPractice" destination="sRq-rB-iH3" id="x3C-Yh-zUG"/>
+                        <outlet property="labelRange" destination="djR-O9-TOe" id="51Q-PP-h13"/>
+                        <outlet property="labelType" destination="gh0-Zi-k5W" id="O4o-B4-gbS"/>
                         <outlet property="subjectText" destination="Ug6-6R-ivJ" id="e8r-ve-8Ll"/>
+                        <outlet property="typeClass" destination="ueF-rD-jxk" id="7cm-Yz-2fT"/>
+                        <outlet property="typePractice" destination="Nyn-iT-zK7" id="zrQ-Gn-YCl"/>
+                        <outlet property="typeRange" destination="TGE-WP-CZC" id="3Bc-oX-iRI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuU-7t-GWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
