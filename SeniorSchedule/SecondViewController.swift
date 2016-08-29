@@ -18,6 +18,15 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var typeRange: UISegmentedControl!
     
     
+    @IBOutlet weak var time1: UITextField!
+    @IBOutlet weak var time2: UITextField!
+    @IBOutlet weak var range1: UITextField!
+    @IBOutlet weak var range2: UITextField!
+    
+    
+    
+    
+    
     @IBOutlet weak var labelType: UILabel!
     @IBOutlet weak var labelPractice: UILabel!
     @IBOutlet weak var labelRange: UILabel!
@@ -31,6 +40,24 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var firstVC: FirstViewController = segue.destinationViewController as! FirstViewController
+        firstVC.time1String = time1.text!
+        firstVC.time2String = time2.text!
+        firstVC.typeClassString = labelType.text!
+        firstVC.subjectString = subjectText.text!
+        firstVC.typePracticeString = labelPractice.text!
+        firstVC.range1String = range1.text!
+        firstVC.range2String = range2.text!
+        firstVC.typeRangeString = labelRange.text!
+    }
+    
+    
+    
+    
+    
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
     {
