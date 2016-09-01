@@ -11,7 +11,9 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var calenderImage: UIImageView!
+
     @IBOutlet weak var moodImage: UIImageView!
+    
     @IBOutlet weak var dogpawImage: UIImageView!
     
     @IBOutlet weak var time1: UILabel!
