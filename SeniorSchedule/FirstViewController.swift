@@ -38,6 +38,27 @@ class FirstViewController: UIViewController {
     var range2String = String()
     var typeRangeString = String()
     
+    func segue(){
+        if time2 != nil{
+            timeToTimeString = "~"
+        }else{
+            timeToTime.hidden = true
+        }
+        if range2 != nil{
+            rangeToRange.text = "~"
+        }else{
+            rangeToRange.hidden = true
+        }
+        time1.text = time1String
+        time2.text = time2String
+        typeClass.text = typeClassString
+        subject.text = subjectString
+        typePractice.text = typePracticeString
+        range1.text = range1String
+        range2.text = range2String
+        typeRange.text = typeRangeString
+    }
+    
     
     
     override func viewDidLoad() {
@@ -45,17 +66,8 @@ class FirstViewController: UIViewController {
         self.calenderImage.image = UIImage(named: "calender")
         self.moodImage.image = UIImage(named: "mood")
         self.dogpawImage.image = UIImage(named: "dogpaw")
+        segue()
         
-        time1.text = time1String
-        timeToTime.text = timeToTimeString
-        time2.text = time2String
-        typeClass.text = typeClassString
-        subject.text = subjectString
-        typePractice.text = typePracticeString
-        range1.text = range1String
-        rangeToRange.text = rangeToRangeString
-        range2.text = range2String
-        typeRange.text = typeRangeString
     }
 
     override func didReceiveMemoryWarning() {

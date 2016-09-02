@@ -22,8 +22,8 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var time2: UITextField!
     @IBOutlet weak var range1: UITextField!
     @IBOutlet weak var range2: UITextField!
-    
-    
+    let timeToTime = "~"
+    let rangeToRange = "~"
     
     
     
@@ -53,6 +53,7 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
         firstVC.range2String = range2.text!
         firstVC.typeRangeString = labelRange.text!
     }
+    
     
     
     
@@ -124,6 +125,7 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     
     
     @IBAction func confirm(sender: AnyObject) {
+        
         
     }
     
