@@ -22,6 +22,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var typeClass: UILabel!
     @IBOutlet weak var subject: UILabel!
     @IBOutlet weak var typePractice: UILabel!
+    @IBOutlet weak var which: UILabel!
     @IBOutlet weak var range1: UILabel!
     @IBOutlet weak var rangeToRange: UILabel!
     @IBOutlet weak var range2: UILabel!
@@ -33,21 +34,24 @@ class FirstViewController: UIViewController {
     var typeClassString = String()
     var subjectString = String()
     var typePracticeString = String()
+    var whichString = String()
     var range1String = String()
     var rangeToRangeString = String()
     var range2String = String()
     var typeRangeString = String()
     
     func segue(){
-        if time2 != nil{
-            timeToTimeString = "~"
+        if time2String == "" {
+            timeToTime.text = ""
         }else{
-            timeToTime.hidden = true
+            timeToTime.text = "~"
         }
-        if range2 != nil{
-            rangeToRange.text = "~"
+        if range2String == ""{
+            rangeToRange.text = ""
+            which.text = "第"
         }else{
-            rangeToRange.hidden = true
+            rangeToRange.text = "~"
+            which.text = ""
         }
         time1.text = time1String
         time2.text = time2String

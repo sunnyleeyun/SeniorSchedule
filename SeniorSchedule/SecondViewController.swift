@@ -22,8 +22,8 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var time2: UITextField!
     @IBOutlet weak var range1: UITextField!
     @IBOutlet weak var range2: UITextField!
-    let timeToTime = "~"
-    let rangeToRange = "~"
+//    let timeToTime = "~"
+//    let rangeToRange = "~"
     
     
     
