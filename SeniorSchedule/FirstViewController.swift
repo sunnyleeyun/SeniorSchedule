@@ -11,9 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var calenderImage: UIImageView!
-
     @IBOutlet weak var moodImage: UIImageView!
-    
     @IBOutlet weak var dogpawImage: UIImageView!
     
     @IBOutlet weak var time1: UILabel!
@@ -40,6 +38,17 @@ class FirstViewController: UIViewController {
     var range2String = String()
     var typeRangeString = String()
     
+    
+    
+    func textView() {
+        let textView = UITextView(frame: CGRectMake(20.0, 30.0, 300.0, 30.0))
+        textView.textAlignment = NSTextAlignment.Center
+        textView.textColor = UIColor.blueColor()
+        textView.backgroundColor = UIColor.redColor()
+        self.view.addSubview(textView)
+    }
+    
+    
     func segue(){
         if time2String == "" {
             timeToTime.text = ""
@@ -61,6 +70,12 @@ class FirstViewController: UIViewController {
         range1.text = range1String
         range2.text = range2String
         typeRange.text = typeRangeString
+        
+        var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label.center = CGPointMake(160, 284)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "I'am a test label"
+        self.view.addSubview(label)
     }
     
     
@@ -71,7 +86,6 @@ class FirstViewController: UIViewController {
         self.moodImage.image = UIImage(named: "mood")
         self.dogpawImage.image = UIImage(named: "dogpaw")
         segue()
-        
     }
 
     override func didReceiveMemoryWarning() {
