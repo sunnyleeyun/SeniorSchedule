@@ -8,75 +8,49 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var calenderImage: UIImageView!
     @IBOutlet weak var moodImage: UIImageView!
     @IBOutlet weak var dogpawImage: UIImageView!
+    @IBOutlet weak var Cell: UITableView!
     
-    @IBOutlet weak var time1: UILabel!
-    @IBOutlet weak var timeToTime: UILabel!
-    @IBOutlet weak var time2: UILabel!
-    @IBOutlet weak var typeClass: UILabel!
-    @IBOutlet weak var subject: UILabel!
-    @IBOutlet weak var typePractice: UILabel!
-    @IBOutlet weak var which: UILabel!
-    @IBOutlet weak var range1: UILabel!
-    @IBOutlet weak var rangeToRange: UILabel!
-    @IBOutlet weak var range2: UILabel!
-    @IBOutlet weak var typeRange: UILabel!
+    let animals = ["cat","lion","cheetah"]
     
-    var time1String = String()
-    var timeToTimeString = String()
-    var time2String = String()
-    var typeClassString = String()
-    var subjectString = String()
-    var typePracticeString = String()
-    var whichString = String()
-    var range1String = String()
-    var rangeToRangeString = String()
-    var range2String = String()
-    var typeRangeString = String()
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        //cell!.backgroundColor = UIColor.cyanColor()
+        //tableView.backgroundColor = UIColor.cyanColor()
+        tableView.separatorColor = UIColor.yellowColor()
+        cell?.textLabel?.textColor = UIColor.blueColor()
+        cell?.textLabel?.text = animals[indexPath.row]
+        return cell!
+    }
     
-    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return animals.count
+    }
     
     func textView() {
-        let textView = UITextView(frame: CGRectMake(20.0, 30.0, 300.0, 30.0))
+        let textView = UITextView(frame: CGRectMake(800, 300, 800.0, 30.0))
+        textView.center = CGPointMake(200, 200)
         textView.textAlignment = NSTextAlignment.Center
+        textView.font = UIFont(name: "systemFont", size: 30)
         textView.textColor = UIColor.blueColor()
         textView.backgroundColor = UIColor.redColor()
+        textView.text = "hello please work"
         self.view.addSubview(textView)
     }
     
-    
-    func segue(){
-        if time2String == "" {
-            timeToTime.text = ""
-        }else{
-            timeToTime.text = "~"
-        }
-        if range2String == ""{
-            rangeToRange.text = ""
-            which.text = "第"
-        }else{
-            rangeToRange.text = "~"
-            which.text = ""
-        }
-        time1.text = time1String
-        time2.text = time2String
-        typeClass.text = typeClassString
-        subject.text = subjectString
-        typePractice.text = typePracticeString
-        range1.text = range1String
-        range2.text = range2String
-        typeRange.text = typeRangeString
-        
+    func label(){
         var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
-        label.center = CGPointMake(160, 284)
+        label.center = CGPointMake(300, 284)
         label.textAlignment = NSTextAlignment.Center
         label.text = "I'am a test label"
         self.view.addSubview(label)
     }
+    
+    
     
     
     
@@ -85,7 +59,8 @@ class FirstViewController: UIViewController {
         self.calenderImage.image = UIImage(named: "calender")
         self.moodImage.image = UIImage(named: "mood")
         self.dogpawImage.image = UIImage(named: "dogpaw")
-        segue()
+        //
+        //label()
     }
 
     override func didReceiveMemoryWarning() {

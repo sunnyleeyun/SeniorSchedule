@@ -44,14 +44,7 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var firstVC: FirstViewController = segue.destinationViewController as! FirstViewController
-        firstVC.time1String = time1.text!
-        firstVC.time2String = time2.text!
-        firstVC.typeClassString = labelType.text!
-        firstVC.subjectString = subjectText.text!
-        firstVC.typePracticeString = labelPractice.text!
-        firstVC.range1String = range1.text!
-        firstVC.range2String = range2.text!
-        firstVC.typeRangeString = labelRange.text!
+        
     }
     
     
