@@ -8,28 +8,11 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FirstViewController: UIViewController {
 
     @IBOutlet weak var calenderImage: UIImageView!
     @IBOutlet weak var moodImage: UIImageView!
     @IBOutlet weak var dogpawImage: UIImageView!
-    @IBOutlet weak var Cell: UITableView!
-    
-    let animals = ["cat","lion","cheetah"]
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
-        //cell!.backgroundColor = UIColor.cyanColor()
-        //tableView.backgroundColor = UIColor.cyanColor()
-        tableView.separatorColor = UIColor.yellowColor()
-        cell?.textLabel?.textColor = UIColor.blueColor()
-        cell?.textLabel?.text = animals[indexPath.row]
-        return cell!
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
-    }
     
     func textView() {
         let textView = UITextView(frame: CGRectMake(800, 300, 800.0, 30.0))
