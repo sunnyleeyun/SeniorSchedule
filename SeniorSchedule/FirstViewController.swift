@@ -4,7 +4,7 @@
 //
 //  Created by Sunny on 2016/8/21.
 //  Copyright © 2016年 Sunny. All rights reserved.
-//
+
 
 import UIKit
 
@@ -15,20 +15,20 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var dogpawImage: UIImageView!
     
     func textView() {
-        let textView = UITextView(frame: CGRectMake(800, 300, 800.0, 30.0))
-        textView.center = CGPointMake(200, 200)
-        textView.textAlignment = NSTextAlignment.Center
+        let textView = UITextView(frame: CGRect(x: 800, y: 300, width: 800.0, height: 30.0))
+        textView.center = CGPoint(x: 200, y: 200)
+        textView.textAlignment = NSTextAlignment.center
         textView.font = UIFont(name: "systemFont", size: 30)
-        textView.textColor = UIColor.blueColor()
-        textView.backgroundColor = UIColor.redColor()
+        textView.textColor = UIColor.blue
+        textView.backgroundColor = UIColor.red
         textView.text = "hello please work"
         self.view.addSubview(textView)
     }
     
     func label(){
-        var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
-        label.center = CGPointMake(300, 284)
-        label.textAlignment = NSTextAlignment.Center
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 300, y: 284)
+        label.textAlignment = NSTextAlignment.center
         label.text = "I'am a test label"
         self.view.addSubview(label)
     }

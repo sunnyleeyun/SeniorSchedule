@@ -42,8 +42,8 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var firstVC: FirstViewController = segue.destinationViewController as! FirstViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var firstVC: FirstViewController = segue.destination as! FirstViewController
         
     }
     
@@ -53,29 +53,29 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
     
     
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView!) -> UIView
     {
         let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor.blackColor()
+        pickerLabel.textColor = UIColor.black
         pickerLabel.text = subjects[row]
         pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.textAlignment = NSTextAlignment.Center
+        pickerLabel.textAlignment = NSTextAlignment.center
         return pickerLabel
     }
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponentsInPickerView(_ pickerView: UIPickerView) -> Int {
         return 1
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return subjects.count
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
         return subjects[row]
     }
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         subjectText.text = subjects[row]
     }
     
-    @IBAction func typeClass(sender: AnyObject) {
+    @IBAction func typeClass(_ sender: AnyObject) {
         if typeClass.selectedSegmentIndex == 0 {
             labelType.text = "補習"
         }else if typeClass.selectedSegmentIndex == 1 {
@@ -85,7 +85,7 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
         }
     }
     
-    @IBAction func typePractice(sender: AnyObject) {
+    @IBAction func typePractice(_ sender: AnyObject) {
         if typePractice.selectedSegmentIndex == 0{
             labelPractice.text = "考卷"
         }else if typePractice.selectedSegmentIndex == 1{
@@ -97,11 +97,11 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
         }else if typePractice.selectedSegmentIndex == 4{
             labelPractice.text = "歷屆"
         }else{
-            labelPractice.hidden = true
+            labelPractice.isHidden = true
         }
     }
    
-    @IBAction func typeRange(sender: AnyObject) {
+    @IBAction func typeRange(_ sender: AnyObject) {
         if typeRange.selectedSegmentIndex == 0{
             labelRange.text = "頁"
         }else if typeRange.selectedSegmentIndex == 1{
@@ -111,13 +111,13 @@ class SecondViewController: UIViewController, UIPickerViewDelegate {
         }else if typeRange.selectedSegmentIndex == 3{
             labelRange.text = "冊"
         }else{
-            labelRange.hidden = true
+            labelRange.isHidden = true
         }
     }
     
     
     
-    @IBAction func confirm(sender: AnyObject) {
+    @IBAction func confirm(_ sender: AnyObject) {
         
         
     }
